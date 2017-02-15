@@ -86,10 +86,10 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # MY CUSTOM ALIASES
 alias wifires="sudo service network-manager restart"
-alias py="python3"
-alias pmr="python3 manage.py runserver"
-alias pmm="python3 manage.py migrate"
-alias pms="python3 manage.py shell"
+alias py="python"
+alias pmr="python manage.py runserver"
+alias pmm="python manage.py migrate"
+alias pms="python manage.py shell"
 
 jtokenfunction () {
     curl -X POST -d "email=admin@admin.bg&&password=admin" $1
