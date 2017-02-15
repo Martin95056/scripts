@@ -22,6 +22,13 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib
 echo "${GREEN}Installing git...${NC}"
 sudo apt-get install git-all
 
+echo "${GREEN}Installing postgres...${NC}"
+sudo apt-get install postgresql postgresql-contrib
+
+echo "${GREEN}Inatalling j...${NC}"
+wget https://github.com/gsamokovarov/jump/releases/download/v0.8.0/jump_0.8.0_amd64.deb
+sudo dpkg -i jump_0.8.0_amd64.deb
+
 echo "${CYAN}Do you want to install Google Chrome? (yes/no): ${NC}"
 read want_chrome
 if [ $want_chrome = "yes" ]
@@ -32,10 +39,6 @@ then
     sudo apt-get update 
     sudo apt-get install google-chrome-stable
 fi
-
-echo "${GREEN}Inatalling j...${NC}"
-wget https://github.com/gsamokovarov/jump/releases/download/v0.8.0/jump_0.8.0_amd64.deb
-sudo dpkg -i jump_0.8.0_amd64.deb
 
 echo "${CYAN}Do you want to install ZSH? (yes/no): ${NC}"
 read want_zsh
